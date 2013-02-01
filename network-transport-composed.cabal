@@ -2,15 +2,20 @@ name:                network-transport-composed
 version:             0.1.0.0
 synopsis:            Compose network transports
 -- description:         
-homepage:            http://github.com/haskell-distributed/distributed-process
+homepage:            http://haskell-distributed.github.com
 license:             BSD3
 license-file:        LICENSE
 author:              Edsko de Vries
-maintainer:          edsko@well-typed.com
+maintainer:          edsko@well-typed.com, watson.timothy@gmail.com
+Bug-Reports:         https://cloud-haskell.atlassian.net/browse/NTCOMP
 copyright:           Well-Typed LLP
 category:            Network
 build-type:          Simple
 cabal-version:       >=1.8
+
+Source-Repository head
+  Type:     git
+  Location: https://github.com/haskell-distributed/network-transport-composed
 
 library
   exposed-modules:     Network.Transport.Composed
