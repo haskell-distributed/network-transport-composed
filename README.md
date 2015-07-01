@@ -1,9 +1,6 @@
 # network-transport-composed
 [![travis](https://secure.travis-ci.org/haskell-distributed/network-transport-composed.png)](http://travis-ci.org/haskell-distributed/network-transport-composed)
-[![Release](https://img.shields.io/hackage/v/network-transport-composed.svg)](http://hackage.haskell.org/package/network-transport-composed)
-
-azure-service-api is made available under a BSD-3 license.
-This repository is part of Cloud Haskell.
+[![Release](https://img.shields.io/hackage/v/network-transport-composed.svg)](https://hackage.haskell.org/package/network-transport-composed)
 
 See http://haskell-distributed.github.com for documentation, user guides,
 tutorials and assistance.
