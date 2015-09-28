@@ -1,5 +1,5 @@
 name:                network-transport-composed
-version:             0.2.0.0
+version:             0.2.0.1
 synopsis:            Compose network transports
 homepage:            http://haskell-distributed.github.com
 license:             BSD3
