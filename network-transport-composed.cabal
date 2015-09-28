@@ -5,7 +5,7 @@ homepage:            http://haskell-distributed.github.com
 license:             BSD3
 license-file:        LICENSE
 author:              Edsko de Vries
-maintainer:          edsko@well-typed.com, watson.timothy@gmail.com
+maintainer:          Facundo Dominguez <facundo.dominguez@tweag.io>
 bug-reports:         http://github.com/haskell-distributed/network-transport-composed/issues
 copyright:           (c) 2012 Well-Typed LLP
 category:            Network
