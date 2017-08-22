@@ -48,7 +48,7 @@ import Network.Transport
   , ConnectErrorCode
   , Connection
   )
-import Network.Transport.Internal (encodeInt32, decodeInt32)
+import Network.Transport.Internal (encodeEnum32, decodeNum32)
 
 data ComposedTransport = ComposedTransport {
     -- | The left transport
@@ -72,7 +72,7 @@ serializeComposedAddress (LeftAddress (EndPointAddress addr)) =
 serializeComposedAddress (RightAddress (EndPointAddress addr)) =
   EndPointAddress $ BSS.concat [BSS.singleton 1, addr]
 serializeComposedAddress (EitherAddress (EndPointAddress addr1) (EndPointAddress addr2)) =
-  EndPointAddress $ BSS.concat [BSS.singleton 2, encodeInt32 (BSS.length addr1), addr1, addr2]
+  EndPointAddress $ BSS.concat [BSS.singleton 2, encodeEnum32 (BSS.length addr1), addr1, addr2]
 
 deserializeComposedAddress :: EndPointAddress -> ComposedAddress
 deserializeComposedAddress (EndPointAddress addr) =
@@ -83,7 +83,7 @@ deserializeComposedAddress (EndPointAddress addr) =
     0 -> LeftAddress (EndPointAddress remainder)
     1 -> RightAddress (EndPointAddress remainder)
     2 -> let (len, remainder') = BSS.splitAt 4 remainder
-             (a, b) = BSS.splitAt (decodeInt32 len) remainder'
+             (a, b) = BSS.splitAt (decodeNum32 len) remainder'
          in EitherAddress (EndPointAddress a) (EndPointAddress b)
     _ -> error "deserializeComposedAddress"
 
